@@ -1,1 +1,0 @@
-# holbertonschool-docker_project-
