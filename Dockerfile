@@ -1,11 +1,14 @@
-# Utiliser l'image de base Alpine
+# Utiliser l'image alpine de base
 FROM alpine:latest
 
-# Installer curl
+# Installer curl pour des exemples ultérieurs
 RUN apk add --no-cache curl
 
-# Copier le fichier de configuration dans le conteneur
+# Ajouter un fichier de configuration
 COPY config.txt /app/config.txt
 
-# Commande par défaut à exécuter lors du démarrage du conteneur
-CMD ["sh"]
+# Spécifier le volume à /data
+VOLUME /data
+
+# Commande par défaut
+CMD ["echo", "Hello, Docker Volumes!"]
